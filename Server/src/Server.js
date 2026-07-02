@@ -20,3 +20,5 @@ app.get("/",(req,res) =>{
 app.listen(PORT, HOST, () => {
     console.log("Server ON!")
 })
+
+export default app
