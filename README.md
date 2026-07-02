@@ -76,4 +76,8 @@ A API key é carregada via variável de ambiente e nunca é versionada no reposi
 
 ---
 
+## API em produção
+
+POST https://readme-generator-ai-blond.vercel.app/api/gerar
+
 Desenvolvido por https://github.com/LucasVTK // https://www.linkedin.com/in/lucasnogueiraandrade/
