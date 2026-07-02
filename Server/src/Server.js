@@ -21,4 +21,5 @@ app.listen(PORT, HOST, () => {
     console.log("Server ON!")
 })
 
+//exportando app para vercel.json()
 export default app
