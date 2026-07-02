@@ -1,6 +1,8 @@
 import express from "express"
 import ReadmeRoute from "./Route/ReadmeRoute.js"
 
+
+//configuracoes basicas de servidor
 const app = express()
 const PORT = process.env.PORT
 const HOST = process.env.HOST  
