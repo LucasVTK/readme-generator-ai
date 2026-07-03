@@ -1,0 +1,27 @@
+/* Estilos globais da aplicação */
+
+/* Variáveis de cor — mude aqui para alterar o tema inteiro */
+:root {
+  --cor-fundo: #0f1117;
+  --cor-card: #1a1d27;
+  --cor-borda: #2a2e40;
+  --cor-texto: #e8e6e3;
+  --cor-texto-suave: #9a9890;
+  --cor-acento: #d97757;
+  --cor-acento-hover: #e08b6d;
+  --raio: 14px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  background: radial-gradient(ellipse at top, #171b26 0%, var(--cor-fundo) 60%);
+  color: var(--cor-texto);
+  min-height: 100vh;
+  line-height: 1.6;
+}
