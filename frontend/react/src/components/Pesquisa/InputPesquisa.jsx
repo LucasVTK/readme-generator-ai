@@ -2,19 +2,26 @@ import './InputPesquisa.css'
 import { useState } from 'react'
 
 // Componente de pesquisa: onde o usuário digita a descrição e a stack do projeto.
-function InputPesquisa() {
+function InputPesquisa({setResposta, setEstaCarregando}) {
     
   const [descricao, setDescricao] = useState("")
   const [stack, setStack] = useState("")
 
+
   async function PerguntaParaIA() {
+    setEstaCarregando(true)
+
     const resp = await fetch("https://readme-generator-ai-blond.vercel.app/api/gerar", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ descricao, stack})
     })
+    const dados = await resp.json()
+    setResposta(dados)
+    setEstaCarregando(false)
   }
 
+  
   //botao
   //impede comportamento de recarregar a pagina
   const handlerSubmit = (e) =>{

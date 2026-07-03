@@ -1,8 +1,14 @@
 import InputPesquisa from './components/Pesquisa/InputPesquisa.jsx'
 import AIResponse from './components/Resposta/AIResponse.jsx'
 import './App.css'
+import { useState } from 'react'
 
 function App() {
+
+  const [resposta, setResposta] = useState()
+  const [estaCarregando, setEstaCarregando] = useState(false)
+
+
   return (
     <main className="app-container">
       <header className="app-cabecalho">
@@ -14,8 +20,8 @@ function App() {
         </p>
       </header>
 
-      <InputPesquisa />
-      <AIResponse />
+      <InputPesquisa setResposta={setResposta} setEstaCarregando={setEstaCarregando} />
+      <AIResponse resposta={resposta} estaCarregando={estaCarregando} />
     </main>
   )
 }

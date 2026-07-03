@@ -1,8 +1,8 @@
+
 import './AIResponse.css'
 
-// Componente de resposta: onde a resposta da IA vai aparecer.
 // Apenas estrutura e estilo — troque o texto de exemplo pela resposta da API.
-function AIResponse() {
+function AIResponse({resposta , estaCarregando}) {
   return (
     <section className="resposta-card">
       <div className="resposta-cabecalho">
@@ -13,7 +13,8 @@ function AIResponse() {
       </div>
 
       <pre className="resposta-conteudo">
-        A resposta da IA vai aparecer aqui...
+        {estaCarregando ? "CARREGANDO..." : (resposta ? resposta.readMe : "")}
+        
       </pre>
     </section>
   )
